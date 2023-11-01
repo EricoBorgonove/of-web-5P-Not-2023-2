@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 15px;
+}
+a:hover{
+    font-weight: bolder;
+}
+ul{
+    display:flex;
+    justify-content: start;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin-bottom: 5px;
+}
+li{
+    padding: 3px 10px;
+    border-left: 1px  red;
+}
+main{
+    min-height: 800px;
+}
+.fixa{
+    position: fixed;
+    align-content: center;
+}
+button{
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+}
+i
+
+/*
+* - seletor global ou universal
+# - seletor por Id 
+. - seletor de classes
+tag - seletor de tags
+
+
+formularios - 
+ input button select label
+
+ botoes - 
+ submit reset 
+
+
+
+
+*/

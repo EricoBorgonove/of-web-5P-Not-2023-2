@@ -38,9 +38,9 @@
                 <div>
                     <label for="">Data Nascimento:</label><input type="date">
                     <label for="">Nacionalidade:</label>
-                    <select name="" id="">
+                    <select name="" id="nacionalidade" onclick="verEstados()">
                         <option value="" selected></option>
-                        <option value="">Brasil</option>
+                        <option value="BR">Brasil</option>
                         <option value="">Argentina</option>
                         <option value="">Venezuela</option>
                         <option value="">Corea do Norte</option>
@@ -48,20 +48,16 @@
                         <option value="">Zambia</option>
                     </select>
                     <label for="">Naturalidade</label>
-                    <select name="" id="" disabled>
-                        <option value=""></option>
-                        <option value="">Amazonas</option>
-                        <option value="">Acre</option>
-                        <option value="">Tocantins</option>
-                        <option value="">Piaui</option>
+                    <select name="" id="estados" disabled>
+                        <option value="" selected></option>
                     </select>
                 </div>
                 <div>
                     <label for="">Gênero:</label>
-                    <input type="radio" name="genero" id=""> Masculino
-                    <input type="radio" name="genero" id=""> Feminino
-                    <input type="radio" name="genero" id=""> Outros
-                    <input type="text" hidden>
+                    <input type="radio" name="genero" id="" onclick="verOutros()"> Masculino
+                    <input type="radio" name="genero" id="" onclick="verOutros()"> Feminino
+                    <input type="radio" name="genero" id="" onclick="verOutros()"> Outros
+                    <input type="text" id="outros" hidden>
                 </div>
                 <div>
                     <label for="">Estado Civil:</label>
@@ -73,18 +69,19 @@
                     <input type="text" hidden>
                 </div>
                 <div>
-                    <label for="">CPF:</label> <input type="number" name="" id="">
+                    <label for="">CPF:</label> <input type="text" name="" id="cpf" oninput="cpf()">
                     <label for="">RG:</label> <input type="number" name="" id="">
                 </div>
+                
             </div>
             <div>
                 <h3>Login</h3>
                 <div>
                     <label for="">email:</label> <input type="email" required placeholder="Digite o seu email">
-                    <button type="button" onclick="">Ver</button>
+                    <input type="button" id="btnVer" value="Ver" onclick="verSenha()">
                     <div>
-                        <label for="">Senha</label> <input type="password" name="" id="" required placeholder="Digite a sua Senha">
-                        <label for="">Conf.Senha</label> <input type="password" name="" id="" required>
+                        <label for="">Senha</label> <input type="password" name="" id="senha1" required placeholder="Digite a sua Senha">
+                        <label for="">Conf.Senha</label> <input type="password" name="" id="senha2" required>
                     </div>
                 </div>
             </div>
@@ -97,20 +94,24 @@
             <div>
                 <h3>Endereço</h3>
                 <div>
-                    <label for="">CEP: </label> <input type="text" placeholder="Digite o seu CEP">
-                    <button type="button">Pesquisar</button>
+                    <label for="">CEP: </label> <input type="text" id="cep" placeholder="Digite o seu CEP">
+                    <button type="button" onclick="validarCep()" >Pesquisar</button>
                     <button type="reset">Limpar</button>
-                    <button type="button">Digitar</button>
+                    <button type="button" onclick="digitar()">Digitar</button>
                 </div>
                 <div>
-                    <label for="">Logradouro:</label> <input type="text" disabled> <label for="">N:</label> <input type="text" name="" id="">
+                    <label for="">Logradouro:</label> <input type="text" id="logradouro" disabled> <label for="">N:</label> <input type="text" name="" id="">
                 </div>
                 <div>
-                    <label for="">Estado:</label><input type="text" disabled> <label for="">Cidade:</label> <input type="text" name="" id="" disabled>
+                    <label for="">Estado:</label><input type="text" id="uf" disabled> <label for="">Cidade:</label> <input type="text" name="" id="cidade" disabled>
                 </div>
                 <div>
-                    <label for="">Complemento: </label> <input type="text" disabled>
+                    <label for="">Complemento: </label> <input type="text" id="complemento" disabled>
                 </div>
+                <div>
+                    <label for="">Bairro: </label> <input type="text" id="bairro" disabled>
+                </div>
+
                 <div>
                     <label for="">Referências: </label><textarea name="" id="" cols="35" rows="3"></textarea>
                 </div>
@@ -123,10 +124,10 @@
         </form>
     </main>
 
+    <button type="button" onclick="dizerOla()">ola</button>
 
 
-
-
+    <script src="/scripts/faleconosco.js"></script>
 </body>
 
 </html>
